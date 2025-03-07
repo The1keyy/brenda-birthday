@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Birthday message animation
+    // 🎵 Background Music (Placed at the Start)
+    const urlParams = new URLSearchParams(window.location.search);
+    const soundPreference = urlParams.get("sound");
+
+    if (soundPreference === "on") {
+        const audio = document.createElement("audio");
+        audio.src = "audio/drake.mp3";  // Make sure the file is inside the audio/ folder
+        audio.autoplay = true;
+        audio.loop = true;
+        audio.volume = 0.5;
+
+        // Try playing (Chrome might block autoplay)
+        audio.play().then(() => {
+            console.log("Music is playing!");
+        }).catch(error => {
+            console.log("Autoplay blocked, waiting for user interaction.");
+        });
+
+        document.body.appendChild(audio);
+    }
+
+    // 🎂 Birthday message animation
     const message = `Happy Birthday, Brenda! 🎉  
 
     Wishing you a birthday filled with love, joy, and all the happiness you bring to the people around you. I’m beyond grateful for our friendship, and I already know this next year is gonna be another unforgettable one.  
@@ -20,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textElement.style.transition = "opacity 2s ease-in-out";
     setTimeout(() => textElement.style.opacity = 1, 500);
 
-    // Confetti effect
+    // 🎉 Confetti effect
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
     script.onload = () => {
@@ -37,23 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     document.body.appendChild(script);
 
-    // Smooth scroll when clicking Yes/No buttons
+    // 🎁 Smooth scroll when clicking Yes/No buttons
     const responseMsg = document.getElementById("response-msg");
 
     document.getElementById("yes-btn").addEventListener("click", function() {
         responseMsg.innerText = "Just text me and I'll have your gift ready!!! P.S. I don’t really be on my phone like that so just bear with me.";
         responseMsg.style.color = "gold";
-
-        // Scroll to response message smoothly
         responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 
     document.getElementById("no-btn").addEventListener("click", function() {
         responseMsg.innerText = "Stop being extra and pick Yes 😑";
         responseMsg.style.color = "lightcoral";
-
-        // Scroll to response message smoothly
         responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 });
-
