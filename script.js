@@ -1,31 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 🎵 Background Music (Placed at the Start)
-    const urlParams = new URLSearchParams(window.location.search);
-    const soundPreference = urlParams.get("sound");
-
-    if (soundPreference === "on") {
-        const audio = document.createElement("audio");
-        audio.src = "audio/drake.mp3";  // Make sure the file is inside the audio/ folder
-        audio.autoplay = true;
-        audio.loop = true;
-        audio.volume = 0.5;
-
-        // Try playing (Chrome might block autoplay)
-        audio.play().then(() => {
-            console.log("Music is playing!");
-        }).catch(error => {
-            console.log("Autoplay blocked, waiting for user interaction.");
-        });
-
-        document.body.appendChild(audio);
-    }
+    // 🎵 Background Music
+    const audio = document.createElement("audio");
+    audio.src = "audio/drake.mp3";  // Make sure the file is inside the audio/ folder
+    audio.loop = true;
+    audio.volume = 0.5;
 
     // 🎂 Birthday message animation
     const message = `Happy Birthday, Brenda! 🎉  
 
     Wishing you a birthday filled with love, joy, and all the happiness you bring to the people around you. I’m beyond grateful for our friendship, and I already know this next year is gonna be another unforgettable one.  
 
-    First off, I hope you receive all the love today because you deserve every bit of it. Just wanted to take a second to say thank you, not just for today, but for always being like a sister to me. From the late-night FT calls to the funniest venting sessions, it’s always a vibe. You let me troll and not take things too seriously, and honestly, I appreciate that more than you know. The advice, the laughs, the support—it all means a lot.  
+    First off, I hope you receive all the love today because you deserve every bit of it. Just wanted to take a second to say thank you, not just for today, but for always being like a sister to me. From the late night FT calls to the funniest venting sessions, it’s always a vibe. You let me troll and not take things too seriously, and honestly, I appreciate that more than you know. The advice, the laughs, the support it all means a lot.  
 
     And thank you for allowing me to be an uncle twice. Your bunny and kitten really made my resume go up. You already know I take my role seriously.  
 
@@ -39,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     textElement.innerHTML = message.replace(/\n/g, "<br>");
     textElement.style.opacity = 0;
     textElement.style.transition = "opacity 2s ease-in-out";
-    setTimeout(() => textElement.style.opacity = 1, 500);
 
     // 🎉 Confetti effect
     const script = document.createElement("script");
@@ -71,5 +55,27 @@ document.addEventListener("DOMContentLoaded", function () {
         responseMsg.innerText = "Stop being extra and pick Yes 😑";
         responseMsg.style.color = "lightcoral";
         responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    // 🎵 Handle "Press Me" button click
+    document.getElementById("press-me-btn").addEventListener("click", function() {
+        // Play the music
+        audio.play().then(() => {
+            console.log("Music is playing!");
+        }).catch(error => {
+            console.log("Autoplay blocked, user interaction required.");
+        });
+
+        // Show the birthday message with animation
+        setTimeout(() => textElement.style.opacity = 1, 500);
+
+        // Trigger confetti
+        if (typeof confetti === "function") {
+            confetti({
+                particleCount: 150,
+                spread: 180,
+                origin: { y: 0.6 }
+            });
+        }
     });
 });
