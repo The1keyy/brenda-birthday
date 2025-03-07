@@ -14,11 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Birthday message animation
-    const message = `Happy Birthday, Brenda! BIG 21!!!🎂✨  
-
-    Wishing you a year filled with happiness, success, and unforgettable memories. You are truly amazing, and today is all about celebrating you!  
-
-    Enjoy your special day! 💖`;
+    const message = `Happy Birthday, Brenda! 
+    Wishing you a birthday filled with love, joy, and all the happiness you bring to the people around you. I’m beyond grateful for our friendship, and I already know this next year is gonna be another unforgettable one.
+First off, I hope you recieve all the love today because you deserve every bit of it. Just wanted to take a second to say thank you, not just for today, but for always being like a sister to me. From the late night FT calls to the funniest venting sessions, it’s always a vibe. You let me troll and not take things too seriously, and honestly, I appreciate that more than you know. The advice, the laughs, the support, it all means a lot.
+And thank you for allowing me to be an uncle twice. Your bunny and kitten really made my resume go up. You already know I take my role seriously.
+And because I truly value this friendship, I had to do something special. So, I coded this whole website just for you. That’s real love right there. Friendship on a different level twin.
+Life be doing its thing, but through it all, I’m grateful for this bond we’ve built. No matter what, I got you, just like you’ve always had me.
+So today, we celebrating, laughing, and making some more memories. Much love, fam. Get lit for me today🕺🏿🕺🏿 BIG 21 !!!!
+;
 
     const textElement = document.getElementById("birthday-message");
     textElement.innerHTML = message.replace(/\n/g, "<br>");
