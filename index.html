@@ -33,16 +33,18 @@
 
     <script>
 
-  function goToIndex(soundEnabled) {
+function goToIndex(soundEnabled) {
+      alert("Button clicked! Redirecting..."); // This should pop up when you click a button
+
       let url = "main.html";
       if (soundEnabled) {
-          url += "?sound=on";  // Append "sound=on" to the URL
+          url += "?sound=on";  
       } else {
-          url += "?sound=off"; // Append "sound=off" to the URL
+          url += "?sound=off";
       }
       window.location.href = url;
   }
-  
+
 </script>
 
 </body>
