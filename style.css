@@ -157,4 +157,18 @@ body {
         transform: scale(1.2) rotate(-45deg);
     }
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Adds spacing on small screens */
+        text-align: center; /* Centers content */
+    }
 
+    img {
+        width: 90%; /* Reduces image size slightly */
+    }
+
+    .hear-more-button {
+        font-size: 14px; /* Adjusts button font size */
+        padding: 8px 12px;
+    }
+}
