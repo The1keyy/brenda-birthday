@@ -92,3 +92,69 @@ body {
 .hero-section h1 {
     animation: glow 1s infinite alternate;
 }
+
+/* Updated Image Container - Centers Images & Heart */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adjust spacing between images & heart */
+    margin-top: 20px;
+}
+
+/* Ensure images are the same size */
+.image-box img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Center and adjust the heart */
+.heart-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make the heart slightly bigger if needed */
+.heart {
+    width: 90px;
+    height: 90px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+/* Heart shape fix */
+.heart::before, .heart::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -45px;
+    left: 0;
+}
+
+.heart::after {
+    left: 45px;
+    top: 0;
+}
+
+/* Adjust heartbeat animation */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+}
+
