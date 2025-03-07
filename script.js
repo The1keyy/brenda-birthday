@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 🎵 Background Music
+    // Background Music
     const audio = document.createElement("audio");
     audio.src = "audio/drake.mp3";  // Make sure the file is inside the audio/ folder
     audio.loop = true;
     audio.volume = 0.5;
 
-    // 🎂 Birthday message animation
+    // Birthday message animation
     const message = `Happy Birthday, Brenda! 🎉  
 
     Wishing you a birthday filled with love, joy, and all the happiness you bring to the people around you. I’m beyond grateful for our friendship, and I already know this next year is gonna be another unforgettable one.  
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textElement.style.opacity = 0;
     textElement.style.transition = "opacity 2s ease-in-out";
 
-    // 🎉 Confetti effect
+    // Confetti effect
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
     script.onload = () => {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     document.body.appendChild(script);
 
-    // 🎁 Smooth scroll when clicking Yes/No buttons
+    // Sscroll when clicking Yes/No buttons
     const responseMsg = document.getElementById("response-msg");
 
     document.getElementById("yes-btn").addEventListener("click", function() {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
     });
 
-    // 🎵 Handle "Press Me" button click
+    // "Press Me" button for music click
     document.getElementById("press-me-btn").addEventListener("click", function() {
         // Play the music
         audio.play().then(() => {
