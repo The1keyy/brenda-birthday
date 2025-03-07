@@ -32,14 +32,18 @@
     </div>
 
     <script>
-        function goToIndex(soundEnabled) {
-            if (soundEnabled) {
-                window.location.href = "index.html?sound=on"; // Pass sound=on in URL
-            } else {
-                window.location.href = "index.html?sound=off"; // Pass sound=off in URL
-            }
-        }
-    </script>
+
+  function goToIndex(soundEnabled) {
+      let url = "main.html";
+      if (soundEnabled) {
+          url += "?sound=on";  // Append "sound=on" to the URL
+      } else {
+          url += "?sound=off"; // Append "sound=off" to the URL
+      }
+      window.location.href = url;
+  }
+  
+</script>
 
 </body>
 </html>

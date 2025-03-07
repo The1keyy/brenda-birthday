@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Check if the user wants sound
     const urlParams = new URLSearchParams(window.location.search);
-    const soundPreference = urlParams.get("sound"); // Get 'sound' from URL
+    const soundPreference = urlParams.get("sound");
 
     if (soundPreference === "on") {
         // Play background music
@@ -42,4 +42,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 2000);
     };
     document.body.appendChild(script);
+
+    // Smooth scroll when clicking Yes/No buttons
+    const responseMsg = document.getElementById("response-msg");
+
+    document.getElementById("yes-btn").addEventListener("click", function() {
+        responseMsg.innerText = "Just text me and I'll have your gift ready!!! P.S. I don’t really be on my phone like that so just bear with me.";
+        responseMsg.style.color = "gold";
+
+        // Scroll to response message smoothly
+        responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    document.getElementById("no-btn").addEventListener("click", function() {
+        responseMsg.innerText = "Stop being extra and pick Yes 😑";
+        responseMsg.style.color = "lightcoral";
+
+        // Scroll to response message smoothly
+        responseMsg.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
 });
