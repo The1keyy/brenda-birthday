@@ -164,8 +164,12 @@ body {
         gap: 15px; /* Adjust spacing */
     }
 
-    .image-box img, .heart {
+    .image-box img {
         width: 80px; /* Smaller size for mobile */
         height: 80px;
+    }
+    .heart {
+        width: 60px;  /* Slightly smaller for mobile */
+        height: 60px;
     }
 }
