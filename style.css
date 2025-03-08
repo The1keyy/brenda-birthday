@@ -151,11 +151,10 @@ body {
     }
 }
 
-/* Optimize layout for iPhones */
 @media only screen and (max-width: 430px) {
-    /* Keep title large but ensure it fits */
+    /* Keep the title large but ensure it fits */
     .hero-section h1 {
-        font-size: clamp(26px, 7vw, 44px); /* Large but fits on one line */
+        font-size: clamp(26px, 7vw, 44px); /* Large but stays on one line */
         max-width: 90vw;
         white-space: nowrap;
         text-align: center;
@@ -163,27 +162,27 @@ body {
         text-overflow: clip;
     }
 
-    /* Make images significantly bigger */
+    /* Make images smaller so they fit well */
     .image-box img {
-        width: 160px;  /* Increased size */
-        height: 160px;
+        width: 120px;  /* Reduced size */
+        height: 120px;
         border-radius: 50%;
         object-fit: cover;
     }
 
-    /* Reduce heart size for better proportion */
+    /* Make the heart bigger */
     .heart {
-        width: 35px; /* Smaller heart */
-        height: 35px;
+        width: 70px; /* Increase heart size */
+        height: 70px;
     }
 
     .heart::before, .heart::after {
-        width: 35px;
-        height: 35px;
+        width: 70px;
+        height: 70px;
     }
 
-    .heart::before { top: -17px; left: 0; }
-    .heart::after { left: 17px; top: 0; }
+    .heart::before { top: -35px; left: 0; }
+    .heart::after { left: 35px; top: 0; }
 
     /* Adjust button for better spacing */
     .hear-more-button {
