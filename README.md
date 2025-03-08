@@ -23,7 +23,7 @@ Applies creative coding techniques, including color theory, animations, and inte
 Demonstrates the ability to build and deploy a fully functional, real-world project.
 
 🌐 Live Demo
-View the website here: Interactive Birthday Website for Brenda
+View the website here: [Interactive Birthday Website for Brenda](https://the1keyy.github.io/brenda-birthday/)
 
 ✨ Why This Project Stands Out
 Showcases creativity, technical execution, and user focused design.
