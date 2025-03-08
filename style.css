@@ -157,26 +157,18 @@ body {
         transform: scale(1.2) rotate(-45deg);
     }
 }
-@media screen and (max-width: 600px) {
-    .image-container {
-        flex-direction: row; /* Ensures horizontal row layout */
-        justify-content: center;
-        gap: 15px; /* Adjust spacing */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Adds spacing on small screens */
+        text-align: center; /* Centers content */
     }
 
-    .image-box img {
-        width: 80px; /* Smaller size for mobile */
-        height: 80px;
-    }
-    .heart {
-        width: 80px;
-        height: 80px;
+    img {
+        width: 90%; /* Reduces image size slightly */
     }
 
-    .heart::before,
-    .heart::after {
-        width: 40px;
-        height: 64px;
+    .hear-more-button {
+        font-size: 5px; /* Adjusts button font size */
+        padding: 8px 12px;
     }
-}
 }
