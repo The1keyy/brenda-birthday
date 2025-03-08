@@ -169,7 +169,14 @@ body {
         height: 80px;
     }
     .heart {
-        width: 60px;  /* Slightly smaller for mobile */
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
+
+    .heart::before,
+    .heart::after {
+        width: 40px;
+        height: 64px;
+    }
+}
 }
