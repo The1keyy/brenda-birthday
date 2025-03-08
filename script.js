@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     And thank you for allowing me to be an uncle twice. Your bunny and kitten really made my resume go up. You already know I take my role seriously.  
 
-    And because I truly value this friendship, I had to do something special. So, I coded this whole website just for you. That’s real love right there. Friendship on a different level, twin.  
+    And because I truly value this friendship, I had to do something special. So, I coded this whole website just for you to celebrate our friendship and make this special day even more memorable. I know I'll be the first to do it, so I hope you love it.
 
     Life be doing its thing, but through it all, I’m grateful for this bond we’ve built. No matter what, I got you, just like you’ve always had me.  
 
