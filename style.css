@@ -167,8 +167,44 @@ body {
         width: 90%; /* Reduces image size slightly */
     }
 
+    /* Fixes the button size to be readable on mobile */
     .hear-more-button {
-        font-size: 5px; /* Adjusts button font size */
-        padding: 8px 12px;
+        font-size: 12px; /* Adjusted to be readable */
+        padding: 10px 15px;
+        width: 80%;
+        max-width: 250px;
+    }
+
+    /* Make the heart smaller but proportional */
+    .heart {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: heartbeat 1.5s infinite; /* Keeps the heartbeat effect */
+    }
+
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 48px;
+        background: red;
+        border-radius: 50px 50px 0 0;
+    }
+
+    .heart::before {
+        left: 15px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+
+    .heart::after {
+        left: -15px;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
     }
 }
