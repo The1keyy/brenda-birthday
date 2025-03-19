@@ -154,7 +154,7 @@ body {
 @media only screen and (max-width: 430px) {
     /* Keep the title large but ensure it fits */
     .hero-section h1 {
-        font-size: clamp(26px, 7vw, 44px); /* Large but stays on one line */
+        font-size: clamp(26px, 7vw, 44px); 
         max-width: 90vw;
         white-space: nowrap;
         text-align: center;
@@ -164,7 +164,7 @@ body {
 
     /* Make images smaller so they fit well */
     .image-box img {
-        width: 120px;  /* Reduced size */
+        width: 120px;  
         height: 120px;
         border-radius: 50%;
         object-fit: cover;
@@ -172,7 +172,7 @@ body {
 
     /* Make the heart bigger */
     .heart {
-        width: 70px; /* Increase heart size */
+        width: 70px; 
         height: 70px;
     }
 

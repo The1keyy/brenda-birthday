@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.loop = true;
     audio.volume = 0.5;
 
-    // Birthday message animation
+    // Birthday message 
     const message = `Happy Birthday, Brenda! 🎉  
 
     Wishing you a birthday filled with love, joy, and all the happiness you bring to the people around you. I’m beyond grateful for our friendship, and I already know this next year is gonna be another unforgettable one.  
